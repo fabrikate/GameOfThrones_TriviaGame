@@ -6,15 +6,16 @@
 	<link href='http://fonts.googleapis.com/css?family=Belgrano|Berkshire+Swash' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<img src="IroneThroneBook.jpg" id="backgroundImg" title="Source: http://vignette2.wikia.nocookie.net/iron-throne-rp/images/7/7e/Iront.jpg/revision/latest?cb=20150203044512">
 	<h1>Game of Thrones Trivia</h1>
 	<h3>When you play Game of Thrones trivia you win or you die</h3>
-	<input name="userName" id="userName" placeholder="Enter your first name...">
-	<button id="userNameButton">Enter</button>
-	<p id="welcomeMsg"></p>
+	<section>
+		<input name="userName" id="userName" placeholder="Enter your first name...">
+		<button id="userNameButton">Begin</button>
+		<p id="welcomeMsg"></p>
+	</section>
 	<section id="question1">
 		<p>We will start off easy...What family was the warden of the North at book/series opening?</p>
-		<select id="question1Select" onchange="questionOne()">
+		<select id="question1Select" onchange="runQuestions()">
 			<option>Choose...</option>
 			<option>Lannister</option>
 			<option>Karstark</option>
@@ -25,8 +26,8 @@
 		<p id="question1Answer"></p>
 	</section>
 	<section id="question2">
-		<p>Who is older, Cersei or Jamie Lannister?</p>
-		<select id="question2Select" onchange='questionTwo()'>
+		<p>Cersei and Jamie are twins, but who is older?</p>
+		<select id="question2Select" onchange='runQuestions()'>
 			<option>Choose...</option>
 			<option>Cersei</option>
 			<option>Jamie</option>
@@ -34,6 +35,19 @@
 		<p id='question2Button'></p>
 		<p id="question2Answer"></p>
 	</section>
+	<section id="question3">
+		<p>Cersei was engaged to someone before she married Robert. Who was it?</p>
+		<select id="question3Select" onchange='runQuestions()'>
+			<option>Choose...</option>
+			<option>Brandon Stark</option>
+			<option>Rhaegar Targaryen</option>
+			<option>Loras Tyrell</option>
+			<option>Oberan Martel</option>
+		</select>
+		<p id='question3Button'></p>
+		<p id="question3Answer"></p>
+	</section>
+	<img src="IroneThroneBook.jpg" id="backgroundImg" title="Source: http://vignette2.wikia.nocookie.net/iron-throne-rp/images/7/7e/Iront.jpg/revision/latest?cb=20150203044512">
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

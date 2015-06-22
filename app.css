@@ -1,4 +1,4 @@
-/*#backgroundImg {
+#backgroundImg {
   z-index: -80;
   position: fixed;
   top: 0%;
@@ -17,9 +17,9 @@
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-}*/
+}
 
-/*body {
+body {
   font-size: 18px;
   font-family: 'Belgrano', serif;
 }
@@ -33,6 +33,20 @@ section {
   margin-right: auto;
   margin-left: auto;
   margin: 10px;
-  background-color: #CCB8A3;
-  border: 5px solid #FFCA52;*/
+  background-color: #DABFAA;
+  border: 5px solid #A7411F;
 }
+
+input, select, option {
+  background-color: #F5E585;
+  color: #503830;
+  font-size: 18px;
+}
+
+button {
+  font-family: 'Berkshire Swash', serif;
+  font-size: 18px;
+  background-color: #A7411F;
+  color: #F6F2EF;
+}
+
