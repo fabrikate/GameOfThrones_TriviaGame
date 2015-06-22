@@ -17,40 +17,6 @@ var getUserName = function(userName) {
 var findUserButton = document.getElementById('userNameButton');
 findUserButton.addEventListener('click',getUserName,false);
 
-// var questionOne = function(selection) {
-// 	var findAnswerOne = document.getElementById('question1Select');
-// 	var userAnswer1 = findAnswerOne.value;
-// 	console.log(userAnswer1);
-
-// 	var answerCheckLocation = document.getElementById('question1Answer');
-// 	if(userAnswer1 === 'Stark'){
-// 		var rightAns = ('Correct!');
-// 		answerCheckLocation.textContent = rightAns;
-// 	}else{
-// 		var wrongAns = ('Wrong!!');
-// 		answerCheckLocation.textContent = wrongAns;
-// 	}
-// };
-// var findAnswerButton = document.getElementById('question1Button');
-// findAnswerButton.addEventListener('click', questionOne, false);
-
-// var questionTwo = function(selection) {
-// 	var elQuestionTwo = document.getElementById("question2Select");
-// 	var userAnswer2 = elQuestionTwo.value;
-// 	console.log('userAnswer2');
-
-// 	var elAnswer2 = document.getElementById('question2Answer');
-// 	if(userAnswer2 === 'Cersei') {
-// 		var rightAns2 = ('Correct!');
-// 		elAnswer2.textContent = rightAns2;
-// 	}else{
-// 		var wrongAns2 = 'Wrong!!';
-// 		elAnswer2.textContent = wrongAns2;
-// 	}
-// };
-// var showQ2Ans = document.getElementById('question2Button');
-// showQ2Ans.addEventListener('click', questionTwo, false);
-
 var Questions = function(answer, elUserInput, elAnswer, elEvent){
 	this.answer = answer; //what the correct answer is
 	this.elUserInput = elUserInput; //question[i]Select
@@ -63,9 +29,14 @@ var triviaInfo = [];
 triviaInfo.push(new Questions('Stark', 'question1Select', 'question1Answer', 'question1Button'));
 triviaInfo.push(new Questions('Cersei', 'question2Select', 'question2Answer', 'question2Button'));
 triviaInfo.push(new Questions('Rhaegar Targaryen', 'question3Select', 'question3Answer', 'question3Button'));
+triviaInfo.push(new Questions('Joffery Baratheon', 'question4Select', 'question4Answer', 'question4Button'));
+triviaInfo.push(new Questions('Drogon', 'question5Select', 'question5Answer', 'question5Button'));
+triviaInfo.push(new Questions('Braavos', 'question6Select', 'question6Answer', 'question6Button'));
+triviaInfo.push(new Questions("Rickard and Brandon Stark's execution", 'question7Select', 'question7Answer', 'question7Button'))
 
-var runQuestions = function(){
-	for(var i=0; i<triviaInfo.length; i++){
+var runQuestions = function(num){
+	var i = num;
+	// for(var i=0; i<triviaInfo.length; i++){
 		var element = document.getElementById(triviaInfo[i].elUserInput);
 		var userAnswer = element.value;
 
@@ -77,14 +48,26 @@ var runQuestions = function(){
 			var wrongAnswerPrompt = ('Wrong!!');
 			elCheckAnswer.textContent = wrongAnswerPrompt;
 		}
-	}
 };
 
-var q1Listener = function() {
-	runQuestions(1)
-}
-for(i=1; i<triviaInfo.length; i++){
-	var elementEvent = document.getElementById(triviaInfo[i].elEvent);
-	elementEvent.addEventListener('click', runQuestions, false);
-}
-
+var firstQuestion = function(){
+	runQuestions(0);
+};
+var secondQuestion = function(){
+	runQuestions(1);
+};
+var thirdQuestion = function(){
+	runQuestions(2);
+};
+var fourthQuestion = function(){
+	runQuestions(3);
+};
+var fifthQuestion = function(){
+	runQuestions(4);
+};
+var sixthQuestion = function(){
+	runQuestions(5);
+};
+var seventhQuestion = function(){
+	runQuestions(6);
+};

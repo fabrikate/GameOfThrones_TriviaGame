@@ -24,10 +24,21 @@ body {
   font-family: 'Belgrano', serif;
 }
 
-h1,h2,h3,h4 {
+
+h1 {
   font-family: 'Berkshire Swash', cursive;
+  font-size: 48px;
+  position: relative;
+  left: 30%;
 }
 
+aside{
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 30px;
+  position: relative;
+  left: 20%;
+  overflow: auto;
+}
 section {
   width: 40%;
   margin-right: auto;

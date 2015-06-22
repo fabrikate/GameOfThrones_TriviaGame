@@ -6,16 +6,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Belgrano|Berkshire+Swash' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
 	<h1>Game of Thrones Trivia</h1>
-	<h3>When you play Game of Thrones trivia you win or you die</h3>
+	<aside>When you play Game of Thrones trivia you win or you die</aside>
 	<section>
 		<input name="userName" id="userName" placeholder="Enter your first name...">
 		<button id="userNameButton">Begin</button>
 		<p id="welcomeMsg"></p>
 	</section>
+
 	<section id="question1">
 		<p>We will start off easy...What family was the warden of the North at book/series opening?</p>
-		<select id="question1Select" onchange="runQuestions()">
+		<select id="question1Select" onchange="firstQuestion()">
 			<option>Choose...</option>
 			<option>Lannister</option>
 			<option>Karstark</option>
@@ -25,9 +27,10 @@
 		<p id='question1Button'></p>
 		<p id="question1Answer"></p>
 	</section>
+
 	<section id="question2">
 		<p>Cersei and Jamie are twins, but who is older?</p>
-		<select id="question2Select" onchange='runQuestions()'>
+		<select id="question2Select" onchange='secondQuestion()'>
 			<option>Choose...</option>
 			<option>Cersei</option>
 			<option>Jamie</option>
@@ -35,9 +38,10 @@
 		<p id='question2Button'></p>
 		<p id="question2Answer"></p>
 	</section>
+
 	<section id="question3">
 		<p>Cersei was engaged to someone before she married Robert. Who was it?</p>
-		<select id="question3Select" onchange='runQuestions()'>
+		<select id="question3Select" onchange='thirdQuestion()'>
 			<option>Choose...</option>
 			<option>Brandon Stark</option>
 			<option>Rhaegar Targaryen</option>
@@ -47,6 +51,58 @@
 		<p id='question3Button'></p>
 		<p id="question3Answer"></p>
 	</section>
+
+	<section id="question4">
+		<p>Who arranged for the attempted murder of Bran when he was recovering from his fall?</p>
+		<select id="question4Select" onchange='fourthQuestion()'>
+			<option>Choose...</option>
+			<option>Joffery Baratheon</option>
+			<option>Cersei Lannister</option>
+			<option>Theon Greyjoy</option>
+			<option>Tywin Lannister</option>
+		</select>
+		<p id='question4Button'></p>
+		<p id="question4Answer"></p>
+	</section>
+
+	<section id="question5">
+		<p>Which of Daenery's dragons is the biggest?</p>
+		<select id="question5Select" onchange='fifthQuestion()'>
+			<option>Choose...</option>
+			<option>Drogon</option>
+			<option>Rhaegal</option>
+			<option>Viserion</option>
+		</select>
+		<p id='question5Button'></p>
+		<p id="question5Answer"></p>
+	</section>
+
+	<section id="question6">
+		<p>What is the north most free city?</p>
+		<select id="question6Select" onchange='sixthQuestion()'>
+			<option>Choose...</option>
+			<option>Myr</option>
+			<option>Pentos</option>
+			<option>Lys</option>
+			<option>Braavos</option>
+		</select>
+		<p id='question6Button'></p>
+		<p id="question6Answer"></p>
+	</section>
+
+	<section id="question7">
+		<p>What event starts Robert's Rebellion?</p>
+		<select id="question7Select" onchange='seventhQuestion()'>
+			<option>Choose...</option>
+			<option>Rickard and Brandon Stark's execution</option>
+			<option>Lyanna Stark's abduction</option>
+			<option>A raise in taxes</option>
+			<option>All of the above</option>
+		</select>
+		<p id='question7Button'></p>
+		<p id="question7Answer"></p>
+	</section>
+
 	<img src="IroneThroneBook.jpg" id="backgroundImg" title="Source: http://vignette2.wikia.nocookie.net/iron-throne-rp/images/7/7e/Iront.jpg/revision/latest?cb=20150203044512">
 	<script type="text/javascript" src="app.js"></script>
 </body>
