@@ -71,3 +71,29 @@ var sixthQuestion = function(){
 var seventhQuestion = function(){
 	runQuestions(6);
 };
+
+// generate content without writing on html site
+function eighthQuestion(){
+	var elQuestion = document.getElementById('question8');
+	var question8 = 'What is the most popular and widely adopted fan theory?';
+	elQuestion.textContent = question8;
+	var option =
+	['Choose...',
+	"R + L = J",
+	"Tyrion is a Targaryen",
+	"Benjen Stark is a white walker"];
+
+	var createSelect = document.createElement('Select');
+	elQuestion.appendChild(createSelect);
+
+	//with a loop I am only getting the last value of the option!?
+	for(i=0; i<option.length; i++){
+		var createOption = document.createElement('option');
+		createSelect.appendChild(createOption);
+		createOption.textContent = option[i];
+	};
+	console.log(createOption.value);
+
+}
+	var question8button = document.getElementById('question8button');
+	question8button.addEventListener('click', eighthQuestion, false);
