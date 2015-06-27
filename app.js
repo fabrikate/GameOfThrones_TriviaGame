@@ -97,3 +97,5 @@ function eighthQuestion(){
 }
 	var question8button = document.getElementById('question8button');
 	question8button.addEventListener('click', eighthQuestion, false);
+
+	// Adding some content
